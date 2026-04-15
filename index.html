@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khoa Học & Đời Sống - Giải Mã Hiện Tượng Tự Nhiên Kì Thú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="site-nav">
+    <!-- Top bar: Logo + Dropdown + Search -->
+    <div class="nav-top">
+        <div class="nav-top-inner">
+            <a href="#" class="site-title">🔬 Khoa Học & Đời Sống</a>
+
+            <div class="nav-top-right">
+                <!-- Dropdown chuyên mục -->
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                        Chuyên mục
+                        <span class="arrow">▾</span>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <div class="dropdown-header">Danh mục chính</div>
+                        <a href="#hien-tuong" class="dropdown-item">🌋 Hiện tượng tự nhiên</a>
+                        <a href="#vu-tru" class="dropdown-item">🪐 Vũ trụ</a>
+                        <a href="#dong-vat" class="dropdown-item">🦋 Thế giới động vật</a>
+                        <a href="#khi-hau" class="dropdown-item">🌍 Khí hậu & Môi trường</a>
+                        <a href="#khoa-hoc-vui" class="dropdown-item">🧪 Khoa học vui</a>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-header">Khám phá thêm</div>
+                        <a href="https://vi.wikipedia.org/wiki/Khoa_h%E1%BB%8Dc" target="_blank" class="dropdown-item">📚 Khoa học đại cương</a>
+                        <a href="https://vi.wikipedia.org/wiki/C%C3%B4ng_ngh%E1%BB%87" target="_blank" class="dropdown-item">💻 Công nghệ</a>
+                        <a href="https://vi.wikipedia.org/wiki/Sinh_h%E1%BB%8Dc" target="_blank" class="dropdown-item">🧬 Sinh học</a>
+                    </div>
+                </div>
+
+                <!-- Search -->
+                <div class="nav-search">
+                    <button class="search-toggle" aria-label="Tìm kiếm">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </button>
+                    <div class="search-box">
+                        <svg class="search-box-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9aa0a6" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <input type="text" class="search-input" placeholder="Tìm kiếm bài viết..." autocomplete="off">
+                        <button class="search-close" aria-label="Đóng">✕</button>
+                        <!-- Gợi ý tìm kiếm -->
+                        <div class="search-suggestions">
+                            <div class="suggestions-header">Gợi ý tìm kiếm</div>
+                            <div class="suggestion-chips">
+                                <span class="chip" data-key="cực quang">Cực quang</span>
+                                <span class="chip" data-key="lỗ đen">Lỗ đen</span>
+                                <span class="chip" data-key="núi lửa">Núi lửa</span>
+                                <span class="chip" data-key="bạch tuộc">Bạch tuộc</span>
+                                <span class="chip" data-key="sét">Sét</span>
+                                <span class="chip" data-key="nhật thực">Nhật thực</span>
+                                <span class="chip" data-key="El Niño">El Niño</span>
+                                <span class="chip" data-key="ozone">Ozone</span>
+                            </div>
+                            <div class="suggestions-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-toggle" aria-label="Menu">☰</button>
+        </div>
+    </div>
+
+    <!-- Bottom bar: Nav links -->
+    <div class="nav-bottom">
+        <div class="nav-bottom-inner">
+            <div class="nav-links">
+                <a href="#hien-tuong" class="nav-link active">Hiện tượng tự nhiên</a>
+                <a href="#vu-tru" class="nav-link">Vũ trụ</a>
+                <a href="#dong-vat" class="nav-link">Thế giới động vật</a>
+                <a href="#khi-hau" class="nav-link">Khí hậu & Môi trường</a>
+                <a href="#khoa-hoc-vui" class="nav-link">Khoa học vui</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO BANNER ===== -->
+<header class="hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>KHOA HỌC & ĐỜI SỐNG</h1>
+        <p class="hero-subtitle">Giải mã những hiện tượng tự nhiên kì thú nhất hành tinh</p>
+    </div>
+</header>
+
+<!-- ===== FEATURED ARTICLE ===== -->
+<section class="section featured-section">
+    <div class="container">
+        <div class="featured-card">
+            <div class="featured-image">
+                <img src="https://images.unsplash.com/photo-1561470508-fd4df1ed90b2?w=900&h=500&fit=crop" alt="Cực quang">
+            </div>
+            <div class="featured-text">
+                <span class="tag">Nổi bật</span>
+                <h2><a href="https://vi.wikipedia.org/wiki/C%E1%BB%B1c_quang" target="_blank">Cực quang – Bí ẩn ánh sáng ma thuật trên bầu trời Bắc Cực</a></h2>
+                <p>Cực quang (Aurora Borealis) là hiện tượng quang học xảy ra khi các hạt mang điện từ gió Mặt Trời va chạm với các phân tử khí trong tầng khí quyển Trái Đất, tạo ra những dải sáng rực rỡ đầy mê hoặc trên bầu trời đêm vùng cực.</p>
+                <span class="time">Cập nhật hôm nay</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== HIỆN TƯỢNG TỰ NHIÊN ===== -->
+<section class="section" id="hien-tuong">
+    <div class="container">
+        <h2 class="section-title">🌋 Hiện Tượng Tự Nhiên Kì Thú</h2>
+
+        <div class="articles-grid">
+            <!-- Article 1 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&h=400&fit=crop" alt="Sét hình cầu">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/S%C3%A9t_h%C3%ACnh_c%E1%BA%A7u" target="_blank">Sét hình cầu – Hiện tượng bí ẩn nhất của khí quyển</a></h3>
+                    <p>Sét hình cầu (Ball Lightning) là quả cầu phát sáng xuất hiện trong cơn giông, di chuyển chậm trong không khí rồi biến mất hoặc nổ tung. Đến nay các nhà khoa học vẫn chưa thống nhất về cơ chế hình thành của hiện tượng kỳ lạ này.</p>
+                    <span class="time">15/04/2026</span>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=600&h=400&fit=crop" alt="Mắt bão">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/M%E1%BA%AFt_b%C3%A3o" target="_blank">Vì sao tâm bão lại yên tĩnh? Giải mã "mắt bão" bí ẩn</a></h3>
+                    <p>Mắt bão là vùng trung tâm yên tĩnh của cơn bão nhiệt đới, nơi gió gần như ngừng thổi và bầu trời quang đãng. Hiện tượng này được giải thích bởi lực Coriolis và sự cân bằng áp suất tạo nên một "ống rỗng" ở trung tâm xoáy thuận.</p>
+                    <span class="time">14/04/2026</span>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?w=600&h=400&fit=crop" alt="Cầu vồng đôi">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/C%E1%BA%A7u_v%E1%BB%93ng" target="_blank">Cầu vồng đôi và vùng tối Alexander – Bí mật quang học trên bầu trời</a></h3>
+                    <p>Cầu vồng đôi xảy ra khi ánh sáng bị phản xạ hai lần bên trong các giọt mưa. Vùng tối giữa hai cầu vồng gọi là "dải tối Alexander" – được đặt theo tên nhà triết học Hy Lạp Alexander of Aphrodisias, người đầu tiên mô tả hiện tượng này.</p>
+                    <span class="time">13/04/2026</span>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop" alt="Sóng phát quang sinh học">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/Ph%C3%A1t_quang_sinh_h%E1%BB%8Dc" target="_blank">Biển phát sáng xanh – Hiện tượng phát quang sinh học kỳ diệu</a></h3>
+                    <p>Những bãi biển phát sáng xanh neon vào ban đêm là do vi sinh vật phù du (dinoflagellate) phát quang sinh học khi bị khuấy động. Phản ứng hóa học giữa luciferin và luciferase tạo ra ánh sáng lạnh không tỏa nhiệt.</p>
+                    <span class="time">12/04/2026</span>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=400&fit=crop" alt="Đá di chuyển">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://en.wikipedia.org/wiki/Sailing_stones" target="_blank">Những hòn đá tự di chuyển ở Thung lũng Chết – Bí ẩn đã được giải</a></h3>
+                    <p>Tại Racetrack Playa (Thung lũng Chết, Mỹ), những tảng đá nặng hàng trăm kg tự di chuyển để lại vệt dài trên mặt đất. Năm 2014, các nhà khoa học phát hiện nguyên nhân: lớp băng mỏng hình thành ban đêm đẩy đá trượt khi gió thổi.</p>
+                    <span class="time">11/04/2026</span>
+                </div>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?w=600&h=400&fit=crop" alt="Mây xà cừ">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://en.wikipedia.org/wiki/Polar_stratospheric_cloud" target="_blank">Mây xà cừ – "Ngọc trai" lấp lánh trên tầng bình lưu</a></h3>
+                    <p>Mây xà cừ (Nacreous clouds) hình thành ở độ cao 15-25 km trong tầng bình lưu khi nhiệt độ xuống dưới -78°C. Các tinh thể băng nhỏ li ti tán xạ ánh sáng tạo nên hiệu ứng cầu vồng lung linh, thường xuất hiện ở vùng cực vào mùa đông.</p>
+                    <span class="time">10/04/2026</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ===== VŨ TRỤ ===== -->
+<section class="section section-alt" id="vu-tru">
+    <div class="container">
+        <h2 class="section-title">🪐 Bí Ẩn Vũ Trụ</h2>
+
+        <div class="articles-grid">
+            <!-- Article 1 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=600&h=400&fit=crop" alt="Lỗ đen">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/L%E1%BB%97_%C4%91en" target="_blank">Lỗ đen – Quái vật vũ trụ nuốt chửng cả ánh sáng</a></h3>
+                    <p>Lỗ đen là vùng không-thời gian có lực hấp dẫn mạnh đến mức không gì thoát ra được, kể cả ánh sáng. Khi một ngôi sao khổng lồ chết đi, lõi của nó sụp đổ dưới chính trọng lực, nén vật chất vào một điểm kỳ dị có mật độ vô hạn.</p>
+                    <span class="time">15/04/2026</span>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=600&h=400&fit=crop" alt="Mưa sao băng">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/M%C6%B0a_sao_b%C4%83ng" target="_blank">Mưa sao băng – Khi Trái Đất "tắm" trong bụi sao chổi</a></h3>
+                    <p>Mưa sao băng xảy ra khi Trái Đất đi qua đám mây bụi mà sao chổi để lại trên quỹ đạo. Các hạt bụi nhỏ bằng hạt cát lao vào khí quyển với tốc độ 30-70 km/s, ma sát sinh nhiệt và bốc cháy tạo thành vệt sáng trên bầu trời.</p>
+                    <span class="time">14/04/2026</span>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=600&h=400&fit=crop" alt="Nhật thực">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/Nh%E1%BA%ADt_th%E1%BB%B1c" target="_blank">Nhật thực toàn phần – Khi Mặt Trăng "nuốt" Mặt Trời</a></h3>
+                    <p>Nhật thực toàn phần xảy ra khi Mặt Trăng nằm giữa Trái Đất và Mặt Trời, che khuất hoàn toàn đĩa Mặt Trời. Một sự trùng hợp kỳ diệu: Mặt Trăng nhỏ hơn Mặt Trời 400 lần nhưng cũng gần hơn 400 lần, tạo ra kích thước biểu kiến gần bằng nhau.</p>
+                    <span class="time">13/04/2026</span>
+                </div>
+            </article>
+        </div>
+
+        <!-- Side articles -->
+        <div class="side-articles">
+            <div class="side-article">
+                <span class="bullet">+</span>
+                <a href="https://vi.wikipedia.org/wiki/H%C3%A0nh_tinh" target="_blank">Vì sao các hành tinh có hình cầu mà thiên thạch thì méo mó?</a>
+            </div>
+            <div class="side-article">
+                <span class="bullet">+</span>
+                <a href="https://vi.wikipedia.org/wiki/Sao_neutron" target="_blank">Sao Neutron – Vật thể đặc nhất vũ trụ, một thìa cà phê nặng 6 tỷ tấn</a>
+            </div>
+            <div class="side-article">
+                <span class="bullet">+</span>
+                <a href="https://vi.wikipedia.org/wiki/Ph%C3%B4ng_vi_s%C3%B3ng_v%C5%A9_tr%E1%BB%A5" target="_blank">Bức xạ nền vi sóng vũ trụ – "Tiếng vọng" từ Big Bang 13.8 tỷ năm trước</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== THẾ GIỚI ĐỘNG VẬT ===== -->
+<section class="section" id="dong-vat">
+    <div class="container">
+        <h2 class="section-title">🦋 Thế Giới Động Vật Kỳ Thú</h2>
+
+        <div class="articles-grid">
+            <!-- Article 1 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=600&h=400&fit=crop" alt="Rùa biển">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/R%C3%B9a_bi%E1%BB%83n" target="_blank">Rùa biển vượt đại dương bằng "la bàn từ trường" tự nhiên</a></h3>
+                    <p>Rùa biển có khả năng cảm nhận từ trường Trái Đất nhờ các tinh thể magnetit trong não bộ. Chúng sử dụng "bản đồ từ trường" này để di chuyển hàng nghìn km qua đại dương và quay về đúng bãi biển nơi chúng được sinh ra.</p>
+                    <span class="time">15/04/2026</span>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=600&h=400&fit=crop" alt="Bạch tuộc">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/B%E1%BA%A1ch_tu%E1%BB%99c" target="_blank">Bạch tuộc – "Thiên tài ngụy trang" có 3 trái tim và máu xanh</a></h3>
+                    <p>Bạch tuộc sở hữu 3 trái tim, máu màu xanh (chứa đồng thay vì sắt) và khả năng thay đổi màu sắc, kết cấu da trong 0.3 giây nhờ hàng triệu tế bào sắc tố chromatophore. Chúng còn có 2/3 tế bào thần kinh nằm ở 8 xúc tu.</p>
+                    <span class="time">14/04/2026</span>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=600&h=400&fit=crop" alt="Chim di cư">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/Chim_di_c%C6%B0" target="_blank">Chim di cư bay 11.000 km không nghỉ – Kỳ tích của tự nhiên</a></h3>
+                    <p>Chim choi choi đuôi sọc (Bar-tailed Godwit) giữ kỷ lục bay liên tục 11.000 km từ Alaska đến New Zealand trong 11 ngày không ăn, không uống, không ngủ. Trước khi bay, chúng tích mỡ tăng gấp đôi trọng lượng và co lại nội tạng không cần thiết.</p>
+                    <span class="time">12/04/2026</span>
+                </div>
+            </article>
+        </div>
+
+        <div class="side-articles">
+            <div class="side-article">
+                <span class="bullet">+</span>
+                <a href="https://vi.wikipedia.org/wiki/C%C3%A1_h%E1%BB%81" target="_blank">Cá hề và hải quỳ – Mối quan hệ cộng sinh hoàn hảo trong tự nhiên</a>
+            </div>
+            <div class="side-article">
+                <span class="bullet">+</span>
+                <a href="https://en.wikipedia.org/wiki/Turritopsis_dohrnii" target="_blank">Sứa bất tử Turritopsis dohrnii – Sinh vật duy nhất có thể "trẻ hóa"</a>
+            </div>
+            <div class="side-article">
+                <span class="bullet">+</span>
+                <a href="https://en.wikipedia.org/wiki/Flocking_(behavior)" target="_blank">Tại sao đàn chim sáo đá bay theo đội hình "vũ điệu" trên bầu trời?</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== KHÍ HẬU & MÔI TRƯỜNG ===== -->
+<section class="section section-alt" id="khi-hau">
+    <div class="container">
+        <h2 class="section-title">🌍 Khí Hậu & Môi Trường</h2>
+
+        <div class="articles-grid">
+            <!-- Article 1 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1559060017-445fb9722f2a?w=600&h=400&fit=crop" alt="Núi lửa">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/N%C3%BAi_l%E1%BB%ADa" target="_blank">Núi lửa phun trào – Sức mạnh kinh hoàng từ lòng Trái Đất</a></h3>
+                    <p>Bên dưới vỏ Trái Đất, magma nóng hơn 1.200°C tích tụ áp suất khổng lồ. Khi áp suất vượt quá sức chịu đựng của lớp đá phía trên, núi lửa phun trào, phóng tro bụi lên cao tới 40km và giải phóng năng lượng tương đương hàng nghìn quả bom nguyên tử.</p>
+                    <span class="time">15/04/2026</span>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=400&fit=crop" alt="El Nino">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/El_Ni%C3%B1o" target="_blank">El Niño và La Niña – Hai "đứa trẻ" đảo lộn thời tiết toàn cầu</a></h3>
+                    <p>El Niño xảy ra khi nước biển Thái Bình Dương xích đạo ấm bất thường, trong khi La Niña là hiện tượng ngược lại. Chu kỳ 2-7 năm này ảnh hưởng đến thời tiết toàn cầu: gây hạn hán ở Đông Nam Á, lũ lụt ở Nam Mỹ và thay đổi đường đi bão.</p>
+                    <span class="time">13/04/2026</span>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=600&h=400&fit=crop" alt="Tầng ozone">
+                </div>
+                <div class="article-body">
+                    <h3><a href="https://vi.wikipedia.org/wiki/S%E1%BB%B1_suy_gi%E1%BA%A3m_ozone" target="_blank">Lỗ thủng tầng Ozone – Câu chuyện thành công hiếm hoi của nhân loại</a></h3>
+                    <p>Năm 1985, các nhà khoa học phát hiện lỗ thủng tầng ozone trên Nam Cực do khí CFC. Nghị định thư Montreal (1987) cấm CFC đã giúp tầng ozone phục hồi dần. Đây là minh chứng hiếm hoi về khả năng hợp tác toàn cầu bảo vệ môi trường.</p>
+                    <span class="time">11/04/2026</span>
+                </div>
+            </article>
+        </div>
+
+        <div class="side-articles">
+            <div class="side-article">
+                <span class="bullet">+</span>
+                <a href="https://vi.wikipedia.org/wiki/Bi%E1%BB%83n_Ch%E1%BA%BFt" target="_blank">Vì sao Biển Chết mặn đến mức không sinh vật nào sống được?</a>
+            </div>
+            <div class="side-article">
+                <span class="bullet">+</span>
+                <a href="https://en.wikipedia.org/wiki/Red_rain_in_Kerala" target="_blank">Hiện tượng mưa máu ở Kerala – Bào tử tảo hay sinh vật ngoài Trái Đất?</a>
+            </div>
+            <div class="side-article">
+                <span class="bullet">+</span>
+                <a href="https://vi.wikipedia.org/wiki/H%E1%BA%A3i_l%C6%B0u_Gulf_Stream" target="_blank">Dòng hải lưu Gulf Stream suy yếu – Châu Âu có thể đối mặt mùa đông khắc nghiệt</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== KHOA HỌC VUI ===== -->
+<section class="section" id="khoa-hoc-vui">
+    <div class="container">
+        <h2 class="section-title">🧪 Khoa Học Vui – Bạn Có Biết?</h2>
+
+        <div class="fun-facts-grid">
+            <div class="fun-fact-card">
+                <div class="fun-fact-icon">⚡</div>
+                <h3>Sét đánh nóng hơn Mặt Trời</h3>
+                <p>Nhiệt độ của một tia sét có thể lên tới 30.000°C – gấp 5 lần nhiệt độ bề mặt Mặt Trời (5.500°C). Sét di chuyển với tốc độ 360.000 km/h.</p>
+            </div>
+
+            <div class="fun-fact-card">
+                <div class="fun-fact-icon">🌊</div>
+                <h3>Đại dương sâu hơn núi cao</h3>
+                <p>Vực Mariana sâu 10.994m – nếu đặt đỉnh Everest (8.849m) xuống đáy, đỉnh núi vẫn còn cách mặt nước hơn 2km!</p>
+            </div>
+
+            <div class="fun-fact-card">
+                <div class="fun-fact-icon">🧬</div>
+                <h3>DNA chung với chuối</h3>
+                <p>Con người chia sẻ khoảng 60% DNA với chuối và 98.7% với tinh tinh. Tất cả sự sống trên Trái Đất đều có chung một tổ tiên.</p>
+            </div>
+
+            <div class="fun-fact-card">
+                <div class="fun-fact-icon">🌧️</div>
+                <h3>Kim cương từ trên trời rơi xuống</h3>
+                <p>Trên sao Hải Vương và sao Thiên Vương, áp suất khổng lồ nén carbon thành kim cương. Hàng nghìn tấn kim cương "mưa" xuống lõi hành tinh mỗi năm.</p>
+            </div>
+
+            <div class="fun-fact-card">
+                <div class="fun-fact-icon">🔥</div>
+                <h3>Nước có thể đóng băng khi đun sôi</h3>
+                <p>Hiệu ứng Mpemba cho thấy nước nóng có thể đóng băng nhanh hơn nước lạnh trong một số điều kiện. Hiện tượng này vẫn chưa được giải thích hoàn toàn.</p>
+            </div>
+
+            <div class="fun-fact-card">
+                <div class="fun-fact-icon">🕳️</div>
+                <h3>99.99% nguyên tử là khoảng trống</h3>
+                <p>Nếu loại bỏ toàn bộ khoảng trống trong nguyên tử của mọi người trên Trái Đất, toàn bộ nhân loại sẽ bé bằng một viên đường.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-top">
+            <p class="footer-disclaimer">Điều khoản sử dụng &nbsp;-&nbsp; Chính sách bảo mật &nbsp;-&nbsp; RSS</p>
+            <p>Theo dõi Khoa Học & Đời Sống trên:</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/khoahocvatuongcuocsong" target="_blank" class="social-link">Facebook</a>
+                <a href="https://www.youtube.com/@khoahoc" target="_blank" class="social-link">YouTube</a>
+                <a href="https://www.tiktok.com/@khoahoc" target="_blank" class="social-link">TikTok</a>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="footer-bottom">
+            <p><strong>Khoa Học & Đời Sống</strong> – Chuyên trang khoa học phổ thông</p>
+            <p>Giải mã những hiện tượng tự nhiên kì thú nhất hành tinh</p>
+            <div class="footer-info">
+                <p>Tổng Biên tập: <strong>Phan Thị Thảo My</strong> – Số thứ tự: 49</p>
+                <p>Địa chỉ: Can tin, Trường THPT TP.Cao Lãnh, số 259 Thiên Hộ Dương, Phường Cao, Đồng Tháp</p>
+                <p>Điện thoại: 0325641048 &nbsp;|&nbsp; Email: <a href="mailto:Yome365@gmail.com">Yome365@gmail.com</a></p>
+            </div>
+            <p class="footer-copy">© 2026 Khoa Học & Đời Sống. Thiết kế theo phong cách Google Sites.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== MOBILE NAV TOGGLE ===== -->
+<script>
+(function() {
+    var navToggle = document.querySelector('.nav-toggle');
+    var navLinksContainer = document.querySelector('.nav-links');
+    var navLinks = document.querySelectorAll('.nav-link');
+    var sections = [];
+
+    // Collect sections referenced by nav links
+    navLinks.forEach(function(link) {
+        var id = link.getAttribute('href').replace('#', '');
+        var section = document.getElementById(id);
+        if (section) sections.push({ id: id, el: section, link: link });
+    });
+
+    // Mobile toggle
+    navToggle.addEventListener('click', function() {
+        var navBottom = document.querySelector('.nav-bottom');
+        navBottom.classList.toggle('mobile-open');
+    });
+
+    // Set active link
+    function setActive(activeLink) {
+        navLinks.forEach(function(l) { l.classList.remove('active'); });
+        if (activeLink) activeLink.classList.add('active');
+    }
+
+    // Smooth scroll helper
+    function scrollToSection(href, callback) {
+        var target = document.querySelector(href);
+        if (target) {
+            var navHeight = document.querySelector('.site-nav').offsetHeight;
+            var top = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+        if (callback) callback();
+    }
+
+    // Nav link click
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            setActive(this);
+            document.querySelector('.nav-bottom').classList.remove('mobile-open');
+            scrollToSection(this.getAttribute('href'));
+        });
+    });
+
+    // Scroll spy
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                var navHeight = document.querySelector('.site-nav').offsetHeight + 20;
+                var scrollPos = window.pageYOffset + navHeight;
+                var current = null;
+                for (var i = 0; i < sections.length; i++) {
+                    if (sections[i].el.offsetTop <= scrollPos) {
+                        current = sections[i].link;
+                    }
+                }
+                if (current) setActive(current);
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // ===== DROPDOWN =====
+    var dropdown = document.querySelector('.nav-dropdown');
+    var dropdownBtn = document.querySelector('.nav-dropdown-btn');
+    var dropdownMenu = document.querySelector('.nav-dropdown-menu');
+    var dropdownItems = document.querySelectorAll('.dropdown-item');
+
+    dropdownBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+        // Close search if open
+        document.querySelector('.search-box').classList.remove('open');
+    });
+
+    dropdownItems.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                dropdown.classList.remove('open');
+                scrollToSection(href);
+                // Also update main nav active
+                navLinks.forEach(function(l) {
+                    if (l.getAttribute('href') === href) setActive(l);
+                });
+            } else {
+                dropdown.classList.remove('open');
+            }
+        });
+    });
+
+    // ===== SEARCH =====
+    var searchToggle = document.querySelector('.search-toggle');
+    var searchBox = document.querySelector('.search-box');
+    var searchInput = document.querySelector('.search-input');
+    var searchClose = document.querySelector('.search-close');
+    var suggestions = document.querySelector('.search-suggestions');
+    var suggestionsList = document.querySelector('.suggestions-list');
+    var chips = document.querySelectorAll('.chip');
+    var allArticles = document.querySelectorAll('.article-card, .fun-fact-card, .featured-card, .side-article');
+
+    // Build article titles index for suggestions
+    var articleTitles = [];
+    document.querySelectorAll('.article-body h3 a, .featured-text h2 a, .side-article a, .fun-fact-card h3').forEach(function(el) {
+        articleTitles.push(el.textContent.trim());
+    });
+
+    searchToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        searchBox.classList.toggle('open');
+        dropdown.classList.remove('open');
+        if (searchBox.classList.contains('open')) {
+            searchInput.focus();
+            suggestions.classList.add('visible');
+        } else {
+            searchInput.value = '';
+            resetSearch();
+            suggestions.classList.remove('visible');
+        }
+    });
+
+    searchClose.addEventListener('click', function() {
+        searchBox.classList.remove('open');
+        suggestions.classList.remove('visible');
+        searchInput.value = '';
+        resetSearch();
+    });
+
+    // Chip click -> fill input and search
+    chips.forEach(function(chip) {
+        chip.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var key = this.getAttribute('data-key');
+            searchInput.value = key;
+            searchInput.dispatchEvent(new Event('input'));
+            searchInput.focus();
+        });
+    });
+
+    searchInput.addEventListener('input', function() {
+        var query = this.value.toLowerCase().trim();
+        if (!query) {
+            resetSearch();
+            suggestionsList.innerHTML = '';
+            suggestions.classList.add('visible');
+            return;
+        }
+
+        // Filter articles visually
+        allArticles.forEach(function(card) {
+            var text = card.textContent.toLowerCase();
+            if (text.indexOf(query) !== -1) {
+                card.style.opacity = '1';
+                card.style.transform = '';
+                card.style.order = '-1';
+            } else {
+                card.style.opacity = '0.2';
+                card.style.transform = 'scale(0.97)';
+                card.style.order = '';
+            }
+        });
+
+        // Build suggestion list
+        var matches = articleTitles.filter(function(t) {
+            return t.toLowerCase().indexOf(query) !== -1;
+        });
+        if (matches.length > 0) {
+            suggestionsList.innerHTML = matches.slice(0, 6).map(function(title) {
+                var highlighted = title.replace(new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi'), '<mark>$1</mark>');
+                return '<div class="suggestion-item"><span class="s-icon">🔍</span><span class="s-text">' + highlighted + '</span></div>';
+            }).join('');
+            suggestions.classList.add('visible');
+        } else {
+            suggestionsList.innerHTML = '<div class="suggestion-item"><span class="s-icon">😕</span><span class="s-text" style="color:#9aa0a6">Không tìm thấy kết quả</span></div>';
+            suggestions.classList.add('visible');
+        }
+    });
+
+    // Click suggestion item -> fill and search
+    suggestionsList.addEventListener('click', function(e) {
+        var item = e.target.closest('.suggestion-item');
+        if (item) {
+            var text = item.querySelector('.s-text').textContent;
+            searchInput.value = text;
+            searchInput.dispatchEvent(new Event('input'));
+        }
+    });
+
+    function resetSearch() {
+        allArticles.forEach(function(card) {
+            card.style.opacity = '';
+            card.style.transform = '';
+            card.style.order = '';
+        });
+    }
+
+    searchInput.addEventListener('focus', function() {
+        suggestions.classList.add('visible');
+    });
+
+    // Close dropdown & search on outside click
+    document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) dropdown.classList.remove('open');
+        if (!document.querySelector('.nav-search').contains(e.target)) {
+            searchBox.classList.remove('open');
+            suggestions.classList.remove('visible');
+            searchInput.value = '';
+            resetSearch();
+        }
+    });
+
+    // ESC key closes both
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            dropdown.classList.remove('open');
+            searchBox.classList.remove('open');
+            suggestions.classList.remove('visible');
+            searchInput.value = '';
+            resetSearch();
+        }
+    });
+})();
+</script>
+
+</body>
+</html>
